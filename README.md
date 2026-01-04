@@ -1,5 +1,10 @@
-# Dynamic Liquid Cooling Loop Simulation
-This project models a dynamic thermal control system for electronics cooling using MATLAB and Simulink that can be used in data centers, electric vehicles, and industrial systems. I implemented the lumped-capacity energy balance and effectiveness-NTU heat exchanger model to predict cooling performance under real-world variable loads, referencing the Lienhard & Lienhard 6th Edition Heat Transfer textbook. 
+# Transient Thermal Analysis of a Dynamic Cooling Loop
+This project models a dynamic thermal control system for electronics cooling using MATLAB and Simulink, capturing interactions between heat input, pump flow rate, and heat exchanger performance under variable loads, that can be used in data centers, electric vehicles, and industrial systems. I implemented the lumped-capacity energy balance and effectiveness-NTU heat exchanger model to predict cooling performance under real-world variable loads across a base model, scenario A (pump failure) and scenario B (efficiency improvement), referencing the Lienhard & Lienhard 6th Edition Heat Transfer textbook
+
+# Reference Documents
+- **setup_cooling_loop.m**: This is the MATLAB initialization script defining system parameters
+- **CoolingLoopModel.slx**: This is the Simulink model implementing the differential equations
+- **docs/Project-1-Technical-Report.pdf**: This is the full technical report
 
 # Simulink Model
 <img width="975" height="249" alt="image" src="https://github.com/user-attachments/assets/3771d496-e2fa-4998-bded-1152f6321b8c" />
@@ -20,9 +25,19 @@ This project models a dynamic thermal control system for electronics cooling usi
 
 I built the MATLAB/Simulink model integrating pump dynamics, load transients, and feedback control logic. After which, I conducted a parametric study on flow rate, ambient temperature, and heat load to identify optimization opportunities, working with 3 scenarios (base model, pump failure and efficiency improvements).
 
-# Files
-- **setup_cooling_loop.m**: This is the MATLAB initialization script defining system parameters
-- **CoolingLoopModel.slx**: This is the Simulink model implementing the differential equations
+# Scenarios
+- **Base Case**  
+  - Heat load: 1 kW step at t = 10 s  
+  - Mass flow rate: 0.2 kg/s  
+  - Radiator UA: 150 W/K  
+
+- **Scenario A – Pump Failure**  
+  - Mass flow rate step: 0.2 → 0.01 kg/s at t = 1000 s  
+  - Radiator UA: 150 W/K  
+
+- **Scenario B – Efficiency Improvement**  
+  - Mass flow rate: 0.2 kg/s  
+  - Radiator UA: 300 W/K
 
 # How to Run
 - Open MATLAB and navigate to this folder
