@@ -39,7 +39,6 @@ I built the MATLAB/Simulink model integrating pump dynamics, load transients, an
 - When testing a pump failure scenario, the flow was reduced from 0.2 to 0.01 kg/s, which caused uncontrolled temperature rise, exceeding safe thresholds in <6 minutes, highlighting redundancy needs. However, when efficiency improvements by doubling radiator effectiveness, this reduced steady-state temp by about 8°C but increased pump power requirements (P ∝ ṁ³); optimal sizing will require cost-benefit analysis.
 - Observed rapid load spikes (0 → 1500 W in 5 sec), which caused only 4°C peak overshoot before settling, proving liquid loops handle transients better than passive systems.
 - Applicable to data centers, EVs, and industrial thermal management
-<img width="610" height="150" alt="image" src="https://github.com/user-attachments/assets/c0db17b8-d5f3-40fc-bb93-bcb6863d726d" />
 
 ## References
 - Lienhard, J.H. & Lienhard, J.H. IV. *A Heat Transfer Textbook*. 6th Edition (2024).
